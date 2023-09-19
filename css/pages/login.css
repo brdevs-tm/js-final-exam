@@ -1,0 +1,114 @@
+@import url("../global.css");
+
+body {
+  background: #4a4546;
+}
+
+.main {
+  position: relative;
+}
+
+.main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.signing-form {
+  width: 350px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 18px;
+  border-radius: 50px;
+  background: #4a4546;
+  box-shadow: 18px 18px 60px #3f3b3c, -18px -18px 60px #554f51;
+}
+
+.signing-form h1 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: normal;
+  background: linear-gradient(to right, #333, #eee, #333);
+  text-shadow: 0 0 20px #eee;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+.signing-inputs {
+  width: 100%;
+  margin-top: 40px;
+  padding-left: 18px;
+  padding-right: 18px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 18px;
+}
+.signing-inputs div {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  gap: 8px;
+}
+.signing-inputs label {
+  /* text-align: center; */
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: normal;
+}
+.signing-inputs input {
+  width: 100%;
+  height: 50px;
+  padding: 14px 16px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: normal;
+  background: transparent;
+  border: 1px solid #4a4546;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #3f3b3c;
+
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+
+.form-submit {
+  margin-top: 30px;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 12px;
+  box-shadow: #3f3b3c;
+  background: linear-gradient(
+    90deg,
+    rgba(74, 69, 70, 1) 50%,
+    rgba(255, 255, 255, 1) 100%,
+    rgba(74, 69, 70, 1) 50%
+  );
+  transition: 0.5s;
+  color: #b29f94;
+  font-size: 20px;
+  font-weight: 500;
+  background-size: 200% auto;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+
+.form-submit:hover {
+  background-position: right center;
+  color: #603813;
+}
