@@ -1,4 +1,5 @@
 @import url("../global.css");
+@import url("../layout/close.css");
 
 .edit-teacher-modal {
   width: 100vw;
@@ -18,13 +19,18 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   opacity: 0;
   z-index: -1;
+  transition: all 0.5s;
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
 }
 
-.teacher-edit-form {
+.edit-teacher-modal .teacher-edit-form {
   position: relative;
   width: 500px;
   height: 500px;
@@ -42,7 +48,7 @@
   -o-border-radius: 50px;
 }
 
-.teacher-edit-form h1 {
+.edit-teacher-modal .teacher-edit-form h1 {
   text-align: center;
   font-size: 28px;
   font-weight: 400;
@@ -51,17 +57,17 @@
   color: #000;
 }
 
-.avatar {
+.edit-teacher-modal .avatar {
   position: absolute;
   top: -75px;
   width: 150px;
 }
 
-.avatar img {
+.edit-teacher-modal .avatar img {
   width: 100%;
 }
 
-.editing-inputs {
+.edit-teacher-modal .editing-inputs {
   width: 100%;
   margin-top: 40px;
   padding-left: 18px;
@@ -71,32 +77,32 @@
   flex-direction: column;
   gap: 18px;
 }
-.name-inputs,
-.groups-married-inputs,
-.number-email-inputs {
+.edit-teacher-modal .name-inputs,
+.edit-teacher-modal .groups-married-inputs,
+.edit-teacher-modal .number-email-inputs {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 18px;
 }
-.name-inputs div {
+.edit-teacher-modal .name-inputs div {
   width: 100%;
   display: flex;
   align-items: start;
   flex-direction: column;
   gap: 8px;
 }
-.name-inputs label,
-.groups-married-inputs label,
-.number-email-inputs label {
+.edit-teacher-modal .name-inputs label,
+.edit-teacher-modal .groups-married-inputs label,
+.edit-teacher-modal .number-email-inputs label {
   /* text-align: center; */
   color: #000;
   font-size: 16px;
   font-weight: 300;
   line-height: normal;
 }
-.name-inputs input {
+.edit-teacher-modal .name-inputs input {
   width: 100%;
   height: 50px;
   padding: 14px 16px;
@@ -114,20 +120,20 @@
   -o-border-radius: 12px;
 }
 
-.groups-married-inputs div {
+.edit-teacher-modal .groups-married-inputs div {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.groups input::-webkit-inner-spin-button,
-.groups input::-webkit-outer-spin-button {
+.edit-teacher-modal .groups input::-webkit-inner-spin-button,
+.edit-teacher-modal .groups input::-webkit-outer-spin-button {
   -webkit-appearance: none;
   appearance: none;
   display: none;
 }
 
-.groups input {
+.edit-teacher-modal .groups input {
   width: 55px;
   height: 40px;
   padding: 14px 16px;
@@ -145,7 +151,7 @@
   -o-border-radius: 12px;
 }
 
-.married input {
+.edit-teacher-modal .married input {
   width: 20px;
   height: 20px;
   background: transparent;
@@ -158,7 +164,7 @@
   -o-border-radius: 12px;
 }
 
-.number-email-inputs div {
+.edit-teacher-modal .number-email-inputs div {
   width: 100%;
   display: flex;
   align-items: start;
@@ -166,7 +172,7 @@
   gap: 8px;
 }
 
-.number-email-inputs input {
+.edit-teacher-modal .number-email-inputs input {
   width: 100%;
   height: 50px;
   padding: 14px 16px;
@@ -184,7 +190,7 @@
   -o-border-radius: 12px;
 }
 
-.detail-buttons {
+.edit-teacher-modal .detail-buttons {
   width: 100%;
   margin-top: 80px;
   display: flex;
@@ -192,8 +198,8 @@
   justify-content: space-between;
 }
 
-.form-submit,
-.delete-member {
+.edit-teacher-modal .form-submit,
+.edit-teacher-modal .delete-member {
   width: 200px;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -220,8 +226,8 @@
   -o-transition: 0.5s;
 }
 
-.form-submit:hover,
-.delete-member:hover {
+.edit-teacher-modal .form-submit:hover,
+.edit-teacher-modal .delete-member:hover {
   background-position: right center;
   color: #603813;
 }

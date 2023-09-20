@@ -10,6 +10,7 @@ const formSubmitBtn = document.querySelector(".form-submit");
 const editStudentButton = document.querySelectorAll(".edit-student");
 const editTeacherButton = document.querySelectorAll(".edit-teacher");
 const addStudentBtn = document.querySelectorAll(".add-student");
+const closeModalBtn = document.querySelectorAll(".close");
 // const addTeacherBtn = document.querySelector(".add-teacher");
 
 user.addEventListener("click", (event) => {
@@ -42,6 +43,16 @@ editTeacherButton.forEach((btn) => {
 addStudentBtn.forEach((btn) => {
   btn.addEventListener("click", () => {
     studentAddModal.classList.add("show-modal");
+  });
+});
+
+closeModalBtn.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    // console.log("aaaa");
+    studentAddModal.classList.remove("show-modal");
+    studentEditModal.classList.remove("show-modal");
+    teacherEditModal.classList.remove("show-modal");
+    // teacherAddModal.classList.remove("show-modal");
   });
 });
 

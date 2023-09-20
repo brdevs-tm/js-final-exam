@@ -57,7 +57,7 @@ nav {
   left: 15px;
   padding: 10px 20px;
   background: #4a4546;
-  
+
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -81,7 +81,8 @@ nav {
   flex-direction: column;
   gap: 5px;
 }
-.user-details li a {
+.user-details li button {
+  background: transparent;
   font-weight: 300;
   font-size: 16px;
   color: #fff;

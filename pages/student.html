@@ -29,7 +29,7 @@
     <header>
       <div class="container">
         <nav>
-          <div class="nav-left"><a href="#">BR EDU</a></div>
+          <div class="nav-left"><a href="teacher.html">BR EDU</a></div>
           <div class="nav-right">
             <div class="user">
               <div class="user-profile">
@@ -43,9 +43,9 @@
               </div>
               <div class="user-dropdown">
                 <ul class="user-details">
-                  <li><a href="#" class="">My account</a></li>
-                  <li><a href="#" class="add-student">Add Student</a></li>
-                  <li><a href="#" class="">My account</a></li>
+                  <li><button class="">My account</button></li>
+                  <li><button class="add-student">Add Student</button></li>
+                  <li><button class="">My account</button></li>
                 </ul>
               </div>
             </div>
@@ -215,6 +215,9 @@
       </div>
     </main>
     <div action="/pages/student.html" class="edit-student-modal">
+      <button class="close">
+        <img src="../assets/close.svg" alt="close" />
+      </button>
       <form action="/pages/student.html" class="student-edit-form">
         <div class="avatar">
           <img src="../assets/user/user.webp" alt="avatar" />
@@ -272,10 +275,10 @@
       </form>
     </div>
     <div class="add-student-modal">
+      <button class="close">
+        <img src="../assets/close.svg" alt="close" />
+      </button>
       <form action="/pages/student.html" class="student-add-form">
-        <div class="avatar">
-          <img src="../assets/user/user.webp" alt="avatar" />
-        </div>
         <div class="adding-inputs">
           <div class="name-inputs">
             <div class="firstname">

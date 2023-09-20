@@ -1,4 +1,5 @@
 @import url("../global.css");
+@import url("../layout/close.css");
 
 .edit-student-modal {
   width: 100vw;
@@ -18,9 +19,14 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   opacity: 0;
   z-index: -1;
+  transition: all 0.5s;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
 }
 
-.student-edit-form {
+.edit-student-modal .student-edit-form {
   position: relative;
   width: 500px;
   height: 500px;
@@ -38,7 +44,7 @@
   -o-border-radius: 50px;
 }
 
-.student-edit-form h1 {
+.edit-student-modal .student-edit-form h1 {
   text-align: center;
   font-size: 28px;
   font-weight: 400;
@@ -47,17 +53,17 @@
   color: #000;
 }
 
-.avatar {
+.edit-student-modal .avatar {
   position: absolute;
   top: -75px;
   width: 150px;
 }
 
-.avatar img {
+.edit-student-modal .avatar img {
   width: 100%;
 }
 
-.editing-inputs {
+.edit-student-modal .editing-inputs {
   width: 100%;
   margin-top: 40px;
   padding-left: 18px;
@@ -67,32 +73,32 @@
   flex-direction: column;
   gap: 18px;
 }
-.name-inputs,
-.groups-married-inputs,
-.number-email-inputs {
+.edit-student-modal .name-inputs,
+.edit-student-modal .groups-married-inputs,
+.edit-student-modal .number-email-inputs {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 18px;
 }
-.name-inputs div {
+.edit-student-modal .name-inputs div {
   width: 100%;
   display: flex;
   align-items: start;
   flex-direction: column;
   gap: 8px;
 }
-.name-inputs label,
-.groups-married-inputs label,
-.number-email-inputs label {
+.edit-student-modal .name-inputs label,
+.edit-student-modal .groups-married-inputs label,
+.edit-student-modal .number-email-inputs label {
   /* text-align: center; */
   color: #000;
   font-size: 16px;
   font-weight: 300;
   line-height: normal;
 }
-.name-inputs input {
+.edit-student-modal .name-inputs input {
   width: 100%;
   height: 50px;
   padding: 14px 16px;
@@ -110,20 +116,13 @@
   -o-border-radius: 12px;
 }
 
-.groups-married-inputs div {
+.edit-student-modal .groups-married-inputs div {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.groups input::-webkit-inner-spin-button,
-.groups input::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  appearance: none;
-  display: none;
-}
-
-.groups input {
+.edit-student-modal .groups input {
   width: 55px;
   height: 40px;
   padding: 14px 16px;
@@ -141,7 +140,7 @@
   -o-border-radius: 12px;
 }
 
-.married input {
+.edit-student-modal .married input {
   width: 20px;
   height: 20px;
   background: transparent;
@@ -154,7 +153,7 @@
   -o-border-radius: 12px;
 }
 
-.number-email-inputs div {
+.edit-student-modal .number-email-inputs div {
   width: 100%;
   display: flex;
   align-items: start;
@@ -162,7 +161,7 @@
   gap: 8px;
 }
 
-.number-email-inputs input {
+.edit-student-modal .number-email-inputs input {
   width: 100%;
   height: 50px;
   padding: 14px 16px;
@@ -180,7 +179,7 @@
   -o-border-radius: 12px;
 }
 
-.detail-buttons {
+.edit-student-modal .detail-buttons {
   width: 100%;
   margin-top: 80px;
   display: flex;
@@ -188,14 +187,19 @@
   justify-content: space-between;
 }
 
-.form-submit,
-.delete-member {
+.edit-student-modal .form-submit,
+.edit-student-modal .delete-member {
   width: 200px;
   padding-top: 10px;
   padding-bottom: 10px;
   border-radius: 12px;
   box-shadow: #3f3b3c;
-  background: linear-gradient(    90deg,    rgba(74, 69, 70, 1) 50%,    rgba(255, 255, 255, 1) 100%,    rgba(74, 69, 70, 1) 50%  );
+  background: linear-gradient(
+    90deg,
+    rgba(74, 69, 70, 1) 50%,
+    rgba(255, 255, 255, 1) 100%,
+    rgba(74, 69, 70, 1) 50%
+  );
   transition: 0.5s;
   color: #b29f94;
   font-size: 20px;
@@ -211,8 +215,8 @@
   -o-transition: 0.5s;
 }
 
-.form-submit:hover,
-.delete-member:hover {
+.edit-student-modal .form-submit:hover,
+.edit-student-modal .delete-member:hover {
   background-position: right center;
   color: #603813;
 }

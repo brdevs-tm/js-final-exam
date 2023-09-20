@@ -1,4 +1,5 @@
 @import url("../global.css");
+@import url("../layout/close.css");
 
 .add-student-modal {
   width: 100vw;
@@ -16,54 +17,31 @@
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(11.6px);
   border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.5s;
   opacity: 0;
   z-index: -1;
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
 }
 
-.student-add-form {
+.add-student-modal .student-add-form {
   position: relative;
-  width: 500px;
+  width: 400px;
   height: 500px;
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding: 30px 18px;
+  padding: 30px 25px;
   border-radius: 50px;
   backdrop-filter: blur(11.6px);
   -webkit-backdrop-filter: blur(11.6px);
   border: 1px solid rgba(255, 255, 255, 1);
-  -webkit-border-radius: 50px;
-  -moz-border-radius: 50px;
-  -ms-border-radius: 50px;
-  -o-border-radius: 50px;
 }
 
-.student-add-form h1 {
-  text-align: center;
-  font-size: 28px;
-  font-weight: 400;
-  line-height: normal;
-  text-shadow: 0 0 20px #000;
-  color: #000;
-}
-
-.avatar {
-  position: absolute;
-  top: -75px;
-  width: 150px;
-}
-
-.avatar img {
+.add-student-modal .adding-inputs {
   width: 100%;
-}
-
-.editing-inputs {
-  width: 100%;
-  margin-top: 40px;
   padding-left: 18px;
   padding-right: 18px;
   display: flex;
@@ -71,32 +49,39 @@
   flex-direction: column;
   gap: 18px;
 }
-.name-inputs,
-.groups-married-inputs,
-.number-email-inputs {
+
+.add-student-modal .name-inputs,
+.add-student-modal .groups-married-inputs,
+.add-student-modal .number-email-inputs {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 18px;
 }
-.name-inputs div {
+
+.add-student-modal .name-inputs div,
+.add-student-modal .groups-married-inputs div,
+.add-student-modal .number-email-inputs div {
   width: 100%;
   display: flex;
-  align-items: start;
-  flex-direction: column;
+  align-items: center;
   gap: 8px;
 }
-.name-inputs label,
-.groups-married-inputs label,
-.number-email-inputs label {
-  /* text-align: center; */
+
+.add-student-modal .name-inputs label,
+.add-student-modal .groups-married-inputs label,
+.add-student-modal .number-email-inputs label {
   color: #000;
   font-size: 16px;
   font-weight: 300;
   line-height: normal;
 }
-.name-inputs input {
+
+.add-student-modal .name-inputs input,
+.add-student-modal .groups input,
+.add-student-modal .married input,
+.add-student-modal .number-email-inputs input {
   width: 100%;
   height: 50px;
   padding: 14px 16px;
@@ -108,83 +93,18 @@
   border: 1px solid #4a4546;
   border-radius: 12px;
   box-shadow: 0 0 20px #3f3b3c;
-  -webkit-border-radius: 12px;
-  -moz-border-radius: 12px;
-  -ms-border-radius: 12px;
-  -o-border-radius: 12px;
 }
 
-.groups-married-inputs div {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.groups input::-webkit-inner-spin-button,
-.groups input::-webkit-outer-spin-button {
-  -webkit-appearance: none;
-  appearance: none;
-  display: none;
-}
-
-.groups input {
-  width: 55px;
-  height: 40px;
-  padding: 14px 16px;
-  color: #000;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: normal;
-  background: transparent;
-  border: 1px solid #4a4546;
-  border-radius: 12px;
-  box-shadow: 0 0 20px #3f3b3c;
-  -webkit-border-radius: 12px;
-  -moz-border-radius: 12px;
-  -ms-border-radius: 12px;
-  -o-border-radius: 12px;
-}
-
-.married input {
+.add-student-modal .married input {
   width: 20px;
   height: 20px;
   background: transparent;
   border: 1px solid #4a4546;
   border-radius: 12px;
   box-shadow: 0 0 20px #3f3b3c;
-  -webkit-border-radius: 12px;
-  -moz-border-radius: 12px;
-  -ms-border-radius: 12px;
-  -o-border-radius: 12px;
 }
 
-.number-email-inputs div {
-  width: 100%;
-  display: flex;
-  align-items: start;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.number-email-inputs input {
-  width: 100%;
-  height: 50px;
-  padding: 14px 16px;
-  color: #000;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: normal;
-  background: transparent;
-  border: 1px solid #4a4546;
-  border-radius: 12px;
-  box-shadow: 0 0 20px #3f3b3c;
-  -webkit-border-radius: 12px;
-  -moz-border-radius: 12px;
-  -ms-border-radius: 12px;
-  -o-border-radius: 12px;
-}
-
-.detail-buttons {
+.add-student-modal .detail-buttons {
   width: 100%;
   margin-top: 80px;
   display: flex;
@@ -192,13 +112,12 @@
   justify-content: space-between;
 }
 
-.form-submit,
-.delete-member {
-  width: 200px;
+.add-student-modal .form-submit {
+  width: 100%;
   padding-top: 10px;
   padding-bottom: 10px;
   border-radius: 12px;
-  box-shadow: #3f3b3c;
+  box-shadow: 0 0 20px #3f3b3c;
   background: linear-gradient(
     90deg,
     rgba(74, 69, 70, 1) 50%,
@@ -210,23 +129,18 @@
   font-size: 20px;
   font-weight: 500;
   background-size: 200% auto;
-  -webkit-border-radius: 12px;
-  -moz-border-radius: 12px;
-  -ms-border-radius: 12px;
-  -o-border-radius: 12px;
-  -webkit-transition: 0.5s;
-  -moz-transition: 0.5s;
-  -ms-transition: 0.5s;
-  -o-transition: 0.5s;
+}
+.add-student-modal #input-img {
+  width: 100%;
 }
 
-.form-submit:hover,
-.delete-member:hover {
+.add-student-modal .form-submit:hover,
+.add-student-modal .delete-member:hover {
   background-position: right center;
   color: #603813;
 }
 
 .show-modal {
   opacity: 1;
-  z-index: 99999;
+  z-index: 99999999999;
 }

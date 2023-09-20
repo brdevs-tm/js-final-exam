@@ -30,7 +30,7 @@ body {
   background: #a69675;
   border-radius: 20px;
   background: #a69675;
-  /* box-shadow: -14px -14px 28px #423c2f, 14px 14px 28px #fff0bb; */
+  box-shadow: -5px -5px 10px #423c2f, 5px 5px 10px #fff0bb;
 }
 
 .teacher-name {

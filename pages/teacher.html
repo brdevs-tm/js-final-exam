@@ -55,9 +55,9 @@
               </div>
               <div class="user-dropdown">
                 <ul class="user-details">
-                  <li><a href="" class="">My account</a></li>
-                  <li><a href="" class="add-student">Add Student</a></li>
-                  <li><a href="" class="">My account</a></li>
+                  <li><button class="">My account</button></li>
+                  <li><button class="add-student">Add Student</button></li>
+                  <li><button class="">My account</button></li>
                 </ul>
               </div>
             </div>
@@ -228,6 +228,9 @@
       </div>
     </main>
     <div class="edit-teacher-modal">
+      <button class="close">
+        <img src="../assets/close.svg" alt="close" />
+      </button>
       <form action="/pages/teacher.html" class="teacher-edit-form">
         <div class="avatar">
           <img src="../assets/user/user.webp" alt="avatar" />
@@ -285,10 +288,10 @@
       </form>
     </div>
     <div class="add-student-modal">
-      <form action="/pages/teacher.html" class="teacher-add-form">
-        <div class="avatar">
-          <img src="../assets/user/user.webp" alt="avatar" />
-        </div>
+      <button class="close">
+        <img src="../assets/close.svg" alt="close" />
+      </button>
+      <form action="/pages/teacher.html" class="student-add-form">
         <div class="adding-inputs">
           <div class="name-inputs">
             <div class="firstname">
@@ -341,7 +344,10 @@
       </form>
     </div>
     <div class="edit-student-modal">
-      <form action="/pages/student.html" class="student-edit-form">
+      <button class="close">
+        <img src="../assets/close.svg" alt="close" />
+      </button>
+      <form action="/pages/teacher.html" class="student-edit-form">
         <div class="avatar">
           <img src="../assets/user/user.webp" alt="avatar" />
         </div>
@@ -398,10 +404,10 @@
       </form>
     </div>
     <div class="add-student-modal">
-      <form action="/pages/student.html" class="student-add-form">
-        <div class="avatar">
-          <img src="../assets/user/user.webp" alt="avatar" />
-        </div>
+      <button class="close">
+        <img src="../assets/close.svg" alt="close" />
+      </button>
+      <form action="/pages/teacher.html" class="student-add-form">
         <div class="adding-inputs">
           <div class="name-inputs">
             <div class="firstname">
@@ -446,6 +452,14 @@
               <label for="email-input">Email</label
               ><input type="email" id="email-input" required />
             </div>
+          </div>
+          <div class="image-input">
+            <input
+              type="file"
+              name="input-img"
+              id="input-img"
+              accept=".jpg, .jpeg, .png, .svg"
+            />
           </div>
           <div class="detail-buttons">
             <button type="submit" class="form-submit">Add Student</button>
