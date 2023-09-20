@@ -1,0 +1,112 @@
+@import url("../global.css");
+@import url("layout/edit-modal.css");
+@import url("layout/add-person-modal.css"); 
+
+body {
+  background: #4a4546;
+}
+
+.students-column {
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.students-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.student-card {
+  position: relative;
+}
+
+.student-name,
+.student-action {
+  margin-bottom: 10px;
+  width: 300px;
+  background: #a69675;
+  border-radius: 20px;
+  background: #a69675;
+  box-shadow: -5px -5px 10px #423c2f, 5px 5px 10px #fff0bb;
+}
+
+.student-name {
+  /* margin-top: 50px; */
+  /* position: absolute; */
+  padding: 20px 30px 30px 60px;
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.names h1 {
+  color: #4a4546;
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+.names span {
+  color: #4a4546;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.student-img {
+  position: absolute;
+  top: 70px;
+  left: -40px;
+  background: #4a4546;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.student-img img {
+  width: 100%;
+  /* height: auto; */
+}
+
+.student-action {
+  /* position: absolute; */
+  top: 130px;
+  padding: 20px 35px 20px 60px;
+  border-radius: 20px;
+  display: flex;
+  align-items: end;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.student-action span {
+  color: #4a4546;
+}
+
+.student-details {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.about-student,
+.edit-student {
+  padding: 5px 10px;
+  color: #4a4546;
+  font-size: 16px;
+  border-radius: 11px;
+  background: #a69675;
+  box-shadow: 4px 4px 8px #423c2f, -4px -4px 8px #fff0bb;
+  cursor: pointer;
+}
