@@ -11,6 +11,18 @@
       media="screen"
       href="../css/pages/student.css"
     />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="../css/layout/add-student-modal.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="../css/layout/edit-student.css"
+    />
     <script defer src="../js/main.js"></script>
   </head>
   <body>
@@ -31,9 +43,9 @@
               </div>
               <div class="user-dropdown">
                 <ul class="user-details">
-                  <li><a href="#">My account</a></li>
-                  <li><a href="#">My account</a></li>
-                  <li><a href="#">My account</a></li>
+                  <li><a href="#" class="">My account</a></li>
+                  <li><a href="#" class="add-student">Add Student</a></li>
+                  <li><a href="#" class="">My account</a></li>
                 </ul>
               </div>
             </div>
@@ -202,8 +214,8 @@
         </div>
       </div>
     </main>
-    <div class="edit-student-modal">
-      <form action="studentEditForm" class="student-edit-form">
+    <div action="/pages/student.html" class="edit-student-modal">
+      <form action="/pages/student.html" class="student-edit-form">
         <div class="avatar">
           <img src="../assets/user/user.webp" alt="avatar" />
         </div>
@@ -259,6 +271,61 @@
         </div>
       </form>
     </div>
-    <!-- <div class="add-student-modal"><form action="student-edit"></form></div> -->
+    <div class="add-student-modal">
+      <form action="/pages/student.html" class="student-add-form">
+        <div class="avatar">
+          <img src="../assets/user/user.webp" alt="avatar" />
+        </div>
+        <div class="adding-inputs">
+          <div class="name-inputs">
+            <div class="firstname">
+              <label for="firstname-input" class="firstname-label"
+                >First name</label
+              >
+              <input
+                type="text"
+                name="firstname"
+                id="firstname"
+                aria-autocomplete="none"
+                required
+              />
+            </div>
+            <div class="lastname">
+              <label for="lastname" class="lastname">Last name</label>
+              <input
+                type="text"
+                name="lastname"
+                id="lastname-input"
+                aria-autocomplete="current-text"
+                required
+              />
+            </div>
+          </div>
+          <div class="groups-married-inputs">
+            <div class="groups">
+              <label for="groups-input">Groups</label
+              ><input type="text" id="groups-input" placeholder="15" disabled />
+            </div>
+            <div class="married">
+              <label for="is-married">Is Married</label
+              ><input type="checkbox" id="is-married" />
+            </div>
+          </div>
+          <div class="number-email-inputs">
+            <div class="number">
+              <label for="number-input">Number</label
+              ><input type="number" id="number-input" required />
+            </div>
+            <div class="email">
+              <label for="email-input">Email</label
+              ><input type="email" id="email-input" required />
+            </div>
+          </div>
+          <div class="detail-buttons">
+            <button type="submit" class="form-submit">Add Student</button>
+          </div>
+        </div>
+      </form>
+    </div>
   </body>
 </html>
